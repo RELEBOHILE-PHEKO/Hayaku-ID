@@ -13,7 +13,7 @@ function ReviewStep({ formData, onBack }) {
             // Replace with your actual API endpoint
             const response = await axios.post('http://localhost:5003/api/submit-application', formData);
             console.log('Response:', response.data);
-            alert('Application Submitted Successfully!');
+            alert('ApplicationSteps Submitted Successfully!');
         } catch (err) {
             console.error('Error submitting application:', err);
             setError('Failed to submit application. Please try again.');

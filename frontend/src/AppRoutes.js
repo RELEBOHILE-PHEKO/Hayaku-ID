@@ -11,15 +11,15 @@ import SupportTicket from './Pages/SupportTicket.jsx';
 import FAQ from './Pages/FAQ.jsx';
 import Helpcenter from './Pages/Helpcenter.jsx';
 
-// Import Application pages
-import ApplicationFormController from './Pages/Application/ApplicationFormController.jsx';
-import PersonalInfo from './Pages/Application/PersonalInfo.jsx';
-import AddressInfo from './Pages/Application/AddressInfo.jsx';
-import DocumentUpload from './Pages/Application/DocumentUpload.jsx';
-import DocumentPreview from './Pages/Application/DocumentPreview.jsx';
-import BiometricStep from './Pages/Application/BiometricStep.jsx';
-import ApplicationReview from './Pages/Application/ApplicationReview.jsx';
-import ReviewStep from './Pages/Application/ReviewStep.jsx';
+// Import ApplicationSteps pages
+import ApplicationFormController from './Pages/ApplicationSteps/ApplicationFormController.jsx';
+import PersonalInfo from './Pages/ApplicationSteps/PersonalInfo.jsx';
+import AddressInfo from './Pages/ApplicationSteps/AddressInfo.jsx';
+import DocumentUpload from './Pages/ApplicationSteps/DocumentUpload.jsx';
+import DocumentPreview from './Pages/ApplicationSteps/DocumentPreview.jsx';
+import BiometricStep from './Pages/ApplicationSteps/BiometricStep.jsx';
+import ApplicationReview from './Pages/ApplicationSteps/ApplicationReview.jsx';
+import ReviewStep from './Pages/ApplicationSteps/ReviewStep.jsx';
 
 // Import Admin pages
 import AdminDashboard from './Pages/Admin/AdminDashboard.jsx';
@@ -82,7 +82,7 @@ const AppRoutes = () => {
       <Route path="/biometrics/facial" element={<ProtectedRoute><FacialRecognition /></ProtectedRoute>} />
       <Route path="/biometrics/fingerprint" element={<ProtectedRoute><FingerprintCapture /></ProtectedRoute>} />
 
-      {/* Application flow */}
+      {/* ApplicationSteps flow */}
       <Route path="/application" element={<ProtectedRoute><ApplicationFormController /></ProtectedRoute>}>
         <Route index element={<Navigate to="/application/personal" replace />} />
         <Route path="personal" element={<PersonalInfo />} />

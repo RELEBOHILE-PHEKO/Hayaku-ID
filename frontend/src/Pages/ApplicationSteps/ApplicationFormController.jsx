@@ -88,4 +88,40 @@ const ApplicationFormController = () => {
         </div>
         <div className="relative h-1 bg-gray-200">
           <div
-            className="absolute h-1 bg
+            className="absolute h-1 bg-primary"
+            style={{ width: `${(getCurrentStepIndex() + 1) / steps.length * 100}%` }}
+          ></div>
+        </div>
+      </div>
+
+      {/* Outlet to render child components */}
+      <Outlet />
+
+      <div className="flex justify-between mt-8">
+        <button
+          className="px-4 py-2 bg-gray-300 text-gray-800 rounded-md"
+          onClick={goToPrevStep}
+        >
+          Previous
+        </button>
+        {getCurrentStepIndex() < steps.length - 1 ? (
+          <button
+            className="px-4 py-2 bg-primary text-white rounded-md"
+            onClick={() => handleSubmit(applicationData)}
+          >
+            Next
+          </button>
+        ) : (
+          <button
+            className="px-4 py-2 bg-primary text-white rounded-md"
+            onClick={() => handlePaymentComplete(applicationData.payment)}
+          >
+            Submit
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ApplicationFormController;

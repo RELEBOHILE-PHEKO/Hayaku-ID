@@ -1,4 +1,4 @@
-import api from './api.js';
+import api from './Api.js';
 
 const authService = {
     login: async (email, password) => {
@@ -14,6 +14,22 @@ const authService = {
     getCurrentUser: () => {
         return localStorage.getItem('token');
     },
+};
+
+// Add this named export function
+export const checkAuthStatus = async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        return false;
+    }
+
+    try {
+        const response = await api.get('/auth/verify');
+        return response.data.isAuthenticated;
+    } catch (error) {
+        localStorage.removeItem('token');
+        return false;
+    }
 };
 
 export default authService;
