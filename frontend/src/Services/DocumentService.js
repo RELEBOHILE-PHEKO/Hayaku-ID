@@ -1,4 +1,4 @@
-import api from './api.js';
+import api from './Api.js';
 
 const documentService = {
     uploadDocument: async (file, type) => {

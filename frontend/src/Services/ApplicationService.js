@@ -1,4 +1,4 @@
-import api from './api.js';
+import api from './Api.js';
 
 export const submitApplication = async (applicationData) => {
     const response = await api.post('/applications/submit', applicationData);

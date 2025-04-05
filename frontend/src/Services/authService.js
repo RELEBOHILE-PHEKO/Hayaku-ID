@@ -1,5 +1,13 @@
+// src/Services/authService.js
 import api from './Api.js';
 
+// 🔥 Named export
+export const checkAuthStatus = () => {
+    const token = localStorage.getItem('token');
+    return !!token; // Returns true if token exists
+};
+
+// 👇 Default export object
 const authService = {
     login: async (email, password) => {
         const response = await api.post('/auth/login', { email, password });
@@ -14,21 +22,8 @@ const authService = {
     getCurrentUser: () => {
         return localStorage.getItem('token');
     },
-};
+    saveSettings(settings) {
 
-// Add this named export function
-export const checkAuthStatus = async () => {
-    const token = localStorage.getItem('token');
-    if (!token) {
-        return false;
-    }
-
-    try {
-        const response = await api.get('/auth/verify');
-        return response.data.isAuthenticated;
-    } catch (error) {
-        localStorage.removeItem('token');
-        return false;
     }
 };
 

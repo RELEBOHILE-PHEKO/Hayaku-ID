@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import authService from "../../services/authService.js"; // Assuming you have a service for API calls
+import authService from "../../Services/authService";
 
 const SystemSettings = () => {
     const [settings, setSettings] = useState({

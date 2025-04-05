@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import authService from "../../services/authService.js";
+import authService from "../../Services/authService";
 
 const UserManagement = () => {
     const [users, setUsers] = useState([]);

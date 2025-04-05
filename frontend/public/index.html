@@ -362,7 +362,7 @@
 
         /* Join section */
         .join-section {
-            background: url('/api/placeholder/1920/1080') no-repeat center center/cover;
+            background: url('/') no-repeat center center/cover;
             position: relative;
         }
 
@@ -808,13 +808,19 @@
                 <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.1);">
                     <form id="joinForm">
                         <div class="mb-3">
-                            <input type="text" class="form-control bg-transparent text-white" placeholder="Full Name" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            <label>
+                                <input type="text" class="form-control bg-transparent text-white" placeholder="Full Name" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            </label>
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control bg-transparent text-white" placeholder="Email Address" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            <label>
+                                <input type="email" class="form-control bg-transparent text-white" placeholder="Email Address" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            </label>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control bg-transparent text-white" placeholder="Phone Number" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            <label>
+                                <input type="tel" class="form-control bg-transparent text-white" placeholder="Phone Number" required style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px;">
+                            </label>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-cyber">Create Free Account <i class="fas fa-arrow-right ms-2"></i></button>
@@ -874,7 +880,9 @@
                 <p class="mb-4" style="color: rgba(255, 255, 255, 0.7);"><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> info@hayakuid.com </p>
                 <form class="newsletter-form">
                     <div class="input-group">
-                        <input type="email" class="form-control bg-transparent text-white" placeholder="Email Address" style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px;">
+                        <label>
+                            <input type="email" class="form-control bg-transparent text-white" placeholder="Email Address" style="border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px;">
+                        </label>
                         <button class="btn btn-primary" type="submit" style="background-color: var(--primary); border: none;">
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -953,7 +961,7 @@
 </script>
 
 <div id="root"></div>
-<script type="module" src="/frontend/src/index.js"></script>
+<script type="module" src="src/index.js"></script>
 
 </body>
 </html>
