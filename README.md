@@ -212,10 +212,3 @@ Redux is used for state management with the following structure:
 4. Push to branch: `git push origin feature/your-feature-name`
 5. Submit a pull request
 
-## License
-
-[Include your license information here]
-
-## Contact
-
-[Your contact information or support channels]
